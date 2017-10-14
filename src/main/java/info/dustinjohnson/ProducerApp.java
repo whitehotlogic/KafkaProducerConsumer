@@ -10,8 +10,9 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 public class ProducerApp
 {
-    private final static String TOPIC = "testaroo";
+
     private final static String SERVERS = "192.168.42.12:9092";
+    private final static String TOPIC = "testaroo";
 
     public static void main(String [] args) {
 

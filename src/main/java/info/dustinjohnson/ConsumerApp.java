@@ -14,6 +14,8 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 public class ConsumerApp {
 
+    private final static String SERVERS = "192.168.42.12:9092";
+
     private final static String TOPIC = "testaroo";
     // confirmed topic exists: testaroo
     // confirmed topic exists: test
@@ -25,7 +27,7 @@ public class ConsumerApp {
         org.apache.log4j.BasicConfigurator.configure(); // use log4j quicktest configuration (for testing -- not production)
 
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.42.12:9092");
+        props.put("bootstrap.servers", SERVERS);
         //props.put("group.id", "test");
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.intervals.ms", "1000");
